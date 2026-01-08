@@ -1,0 +1,16 @@
+services:
+
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_DB: aihunt_db
+      POSTGRES_USER: aihunt_user
+      POSTGRES_PASSWORD: aihunt_password
+    ports:
+      - "5432:5432"
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+
+
