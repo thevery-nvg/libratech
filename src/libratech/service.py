@@ -1,10 +1,9 @@
 from typing import Type, TypeVar
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import DeclarativeMeta
-from slugify import slugify
+from sqlalchemy.orm import DeclarativeBase
 
-ModelType = TypeVar("ModelType", bound=DeclarativeMeta)
+ModelType = TypeVar("ModelType", bound=DeclarativeBase)
 
 async def create_entity(
     session: AsyncSession,
